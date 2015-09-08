@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
-    <?php if (is_tag()) {
+    <?php if ( is_tag() ) {
       $tag = get_queried_object();
-      single_tag_title('<div class="info">Currently selected Tag: <a href="' . get_tag_link($tag->term_id) . '"><strong>');
+      single_tag_title(
+        '<div class="info first">' . __( 'Currently selected tag:', 'tea-time' ) . ' <strong>'
+      );
       echo '</strong></a></div>';
     }?>
 
@@ -10,11 +12,13 @@
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <?php if ( ! post_password_required() && ! is_attachment() ) : the_post_thumbnail(); endif; ?>
-
         <h1 class="title">
           <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
         </h1>
+
+        <?php if ( ! post_password_required() && ! is_attachment() && has_post_thumbnail() ) {
+          the_post_thumbnail();
+        }?>
 
         <div class="meta">
           <span class="date">
@@ -31,7 +35,7 @@
         </div>
 
         <div class="content">
-          <?php the_content(); ?>
+          <?php the_content( __( 'Read more...', 'tea-time' ) ); ?>
         </div>
 
       </article>
@@ -40,16 +44,18 @@
 
     <nav id="pagination">
       <div class="previous">
-        <?php next_posts_link( 'Older posts' ); ?>
+        <?php next_posts_link( __( 'Older posts', 'tea-time' ) ); ?>
       </div>
       <div class="next">
-        <?php previous_posts_link( 'Newer posts' ); ?>
+        <?php previous_posts_link( __( 'Newer posts', 'tea-time' ) ); ?>
       </div>
       <div class="clearfix"></div>
     </nav>
 
     <?php else : ?>
-      <p>Sorry, no posts found.</p>
+      <p>
+        <?php _e( 'Sorry, no posts found.', 'tea-time' ); ?>
+      </p>
     <?php endif; ?>
 
 <?php get_footer(); ?>

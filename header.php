@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <meta name="description" content="A website about Sebastian Herrmann who's involved in software development, design and music.">
-    <meta name="keywords"    content="Sebastian Herrmann, HerrHerrmann.net, Herr Herrmann, Software Development, Design, Webdesign, Photography, Berlin, bm_128, Chiptune, Music, Electronic, Ambient, Techno">
-    <meta name="author"      content="Sebastian Herrmann">
-    <meta name="viewport"    content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <?php wp_head(); ?>
   </head>
 

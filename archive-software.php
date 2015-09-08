@@ -1,18 +1,18 @@
 <?php get_header(); ?>
 
     <article>
-      <h1 class="title">Software</h1>
+      <h1 class="title"><?php _e( 'Software', 'tea-time' ); ?></h1>
       <?php show_page_content( 'software-content' ); ?>
     </article>
 
-    <?php $loop = new WP_Query(array(
+    <?php $loop = new WP_Query( array(
       'post_type'      => 'software',
       'posts_per_page' => 10,
-      'order'          => 'ASC'
+      'order'          => 'DESC'
     )); ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <?php if ( ! post_password_required() && ! is_attachment() ) : the_post_thumbnail(); endif; ?>
         <h1 class="title">
@@ -28,10 +28,10 @@
 
     <nav id="pagination">
       <div class="previous">
-        <?php next_posts_link( '<i class="fa fa-arrow-circle-left"></i> Older projects' ); ?>
+        <?php next_posts_link( '<i class="fa fa-arrow-circle-left"></i> ' . __( 'Older projects', 'tea-time' ) ); ?>
       </div>
       <div class="next">
-        <?php previous_posts_link( 'Newer projects <i class="fa fa-arrow-circle-right"></i>' ); ?>
+        <?php previous_posts_link(  __( 'Newer projects', 'tea-time' ) . ' <i class="fa fa-arrow-circle-right"></i>' ); ?>
       </div>
       <div class="clearfix"></div>
     </nav>

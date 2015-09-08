@@ -1,6 +1,6 @@
 @download-album-width: 160px;
 
-.download-album {
+#content .download-album {
   float: left;
   max-width: @download-album-width;
   text-align: center;
@@ -89,7 +89,7 @@
 }
 
 
-.download-document {
+#content .download-document {
   width: 100%;
   margin: @padding-small 0;
 
@@ -121,8 +121,14 @@
   }
 
   .download-description p {
+    .small;
     display: block;
-    margin: 0;
+    margin: 0 (@padding-small / 2) @padding-small (@padding-small / 2);
     padding: @padding-small;
+    border-right:  1px solid @color-background-dark;
+    border-bottom: 1px solid @color-background-dark;
+    border-left:   1px solid @color-background-dark;
+    border-bottom-left-radius:  @border-radius-normal;
+    border-bottom-right-radius: @border-radius-normal;
   }
 }

@@ -1,0 +1,16 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tea Time Theme 1.0\n"
+"POT-Creation-Date: 2015-09-06 15:15+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sebastian Herrmann\n"
+"Language-Team: Sebastian Herrmann <sebastian@herrherrmann.net>\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "Localization coming soon!"
+msgstr ""

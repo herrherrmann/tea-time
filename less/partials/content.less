@@ -137,6 +137,20 @@
             filter: brightness(90%);
   }
 
+  .info {
+    border: 1px solid @color-background-dark;
+    margin:  @padding-normal 0;
+    padding: @padding-normal;
+  }
+
+  .first {
+    margin-top: 0;
+  }
+
+  .last {
+    margin-bottom: 0;
+  }
+
   form {
     input, textarea {
       font-family: Nunito, sans-serif;
@@ -156,10 +170,6 @@
 
     input[type=submit] {
       .3d-button;
-
-      &:hover {
-        .3d-button-hover;
-      }
     }
   }
 
@@ -208,15 +218,18 @@
 
     }
 
-    .info {
-      .small;
-      border: 1px solid @color-background-light;
-      margin: @padding-normal 0;
-      padding: @padding-normal;
+    &.sticky {
+      padding: @padding-small;
+      border-radius: @border-radius-normal;
+      border: 3px solid @color-background-dark;
+
+      .wp-caption {
+        max-width: 100%;
+      }
     }
 
-    &.sticky {
-
+    .more-link {
+      .3d-button;
     }
   }
 
@@ -274,7 +287,6 @@
 
       a:hover {
         display: block;
-        .3d-button-hover;
         .ellipsis;
       }
 
@@ -282,9 +294,9 @@
         font-family: FontAwesome;
         font-style: normal;
       	font-weight: normal;
-      	padding-right: 0.5em;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
+      	padding-right: 0.5em;
       }
     }
 
