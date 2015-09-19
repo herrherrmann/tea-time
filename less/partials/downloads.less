@@ -1,76 +1,75 @@
 @download-album-width: 160px;
 
 #content .download-album {
-  float: left;
-  max-width: @download-album-width;
+  float     : left;
+  max-width : @download-album-width;
   text-align: center;
   word-break: break-word;
-
+  
   .image-link img {
+    .border-radius;
   }
 
   .title {
     font-weight: 400;
-    min-height: 40px;
+    min-height : 40px;
   }
 
   .year {
     display: inline;
-
+    
     p {
       .no-margin-no-padding;
-      display: inline;
+      display    : inline;
       font-weight: 300;
-      color: @color-font-muted;
+      color      : @color-font-muted;
     }
   }
 
   a.download-link {
-    width: @download-album-width - (2 * @padding-small) - (2 * @border-width);
-    display: block;
-    margin-top: @padding-small;
-    padding: @padding-small;
-
+    width           : @download-album-width - (2 * @padding-small) - (2 * @border-width);
+    display         : block;
+    margin-top      : @padding-small;
+    padding         : @padding-small;
     background-color: @color-accent;
-    border-right:  @border-width solid @color-accent-dark;
-    border-bottom: @border-width solid @color-accent-dark;
-    border-radius: @border-radius-normal;
-    color: @color-white;
-    font-weight: 700;
-    text-align: center;
-
+    border-right    : @border-width solid @color-accent-dark;
+    border-bottom   : @border-width solid @color-accent-dark;
+    .border-radius;
+    color           : @color-white;
+    font-weight     : 700;
+    text-align      : center;
+    
     &:hover {
       background-color: @color-accent-light;
-      border-right:  @border-width solid @color-accent;
-      border-bottom: @border-width solid @color-accent;
-      color: @color-white;
-      font-weight: 700;
+      border-right    : @border-width solid @color-accent;
+      border-bottom   : @border-width solid @color-accent;
+      color           : @color-white;
+      font-weight     : 700;
     }
 
     &:active {
       background-color: @color-accent;
-      color: @color-white;
-      border-right:  @border-width solid @color-accent;
-      border-bottom: @border-width solid @color-accent;
+      color           : @color-white;
+      border-right    : @border-width solid @color-accent;
+      border-bottom   : @border-width solid @color-accent;
     }
 
     &:before {
-      content: "\f019";
-      padding-right: 0.3em;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      text-rendering: auto;
+      content               : "\f019";
+      padding-right         : 0.3em;
+      font-family           : FontAwesome;
+      font-style            : normal;
+      font-weight           : normal;
+      text-rendering        : auto;
       -webkit-font-smoothing: antialiased;
     }
   }
-
 }
 
 /* Desktop */
 @media screen and (min-width: @breakpoint-big) {
   .download-album {
-    margin-right:  @padding-normal;
+    margin-right : @padding-normal;
     margin-bottom: @padding-normal;
   }
 }
@@ -78,57 +77,55 @@
 /* Mobile */
 @media screen and (max-width: @breakpoint-big) {
   .download-album {
-    margin-right:  @padding-small;
+    margin-right : @padding-small;
     margin-bottom: @padding-small;
   }
 }
 
 .post .content .download-album {
-  float: none;
+  float : none;
   margin: 0 auto;
 }
 
-
 #content .download-document {
-  width: 100%;
+  width : 100%;
   margin: @padding-small 0;
-
+  
   .download-link {
-    color: @color-white;
-    display: block;
-    padding: @padding-small;
+    color           : @color-white;
+    display         : block;
+    padding         : @padding-small;
     background-color: @color-accent;
-    border-right:  @border-width solid @color-accent-dark;
-    border-bottom: @border-width solid @color-accent-dark;
-    border-radius: @border-radius-normal;
-
-    &:hover {
+    border-right    : @border-width solid @color-accent-dark;
+    border-bottom   : @border-width solid @color-accent-dark;
+    
+    .border-radius &:hover {
       background-color: @color-accent-light;
-      border-right:  @border-width solid @color-accent;
-      border-bottom: @border-width solid @color-accent;
-      color: @color-white;
+      border-right    : @border-width solid @color-accent;
+      border-bottom   : @border-width solid @color-accent;
+      color           : @color-white;
     }
 
     &:before {
-      content: "\f019";
-      padding-right: 0.3em;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      text-rendering: auto;
+      content               : "\f019";
+      padding-right         : 0.3em;
+      font-family           : FontAwesome;
+      font-style            : normal;
+      font-weight           : normal;
+      text-rendering        : auto;
       -webkit-font-smoothing: antialiased;
     }
   }
 
   .download-description p {
     .small;
-    display: block;
-    margin: 0 (@padding-small / 2) @padding-small (@padding-small / 2);
-    padding: @padding-small;
-    border-right:  1px solid @color-background-dark;
-    border-bottom: 1px solid @color-background-dark;
-    border-left:   1px solid @color-background-dark;
-    border-bottom-left-radius:  @border-radius-normal;
+    display                   : block;
+    margin                    : 0;
+    padding                   : @padding-small;
+    border-right              : 1px solid @color-background-dark;
+    border-bottom             : 1px solid @color-background-dark;
+    border-left               : 1px solid @color-background-dark;
+    border-bottom-left-radius : @border-radius-normal;
     border-bottom-right-radius: @border-radius-normal;
   }
 }

@@ -1,7 +1,12 @@
 /* Mixins */
-.no-margin-no-padding { margin: 0; padding: 0; }
+.no-margin-no-padding {
+  margin : 0;
+  padding: 0;
+}
 
-.clearfix { clear: both; }
+.clearfix {
+  clear: both;
+}
 
 .small {
   font-size: @font-size-small;
@@ -12,28 +17,34 @@
 }
 
 .ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
+  white-space  : nowrap;
+  overflow     : hidden;
   text-overflow: ellipsis;
 }
 
-.3d-button, .3d-button:hover {
-  padding: @padding-small;
-  color: @color-white;
-  border-top:    none;
-  border-left:   none;
-  border-radius: @border-radius-normal;
+.border-radius {
+  -webkit-border-radius: @border-radius-normal;
+  border-radius        : @border-radius-normal;
+}
+
+.3d-button,
+.3d-button:hover {
+  padding    : @padding-small;
+  color      : @color-white;
+  border-top : none;
+  border-left: none;
+  .border-radius;
 }
 
 .3d-button {
   background-color: @color-accent;
-  border-right:  @border-width solid @color-accent-dark;
-  border-bottom: @border-width solid @color-accent-dark;
-
+  border-right    : @border-width solid @color-accent-dark;
+  border-bottom   : @border-width solid @color-accent-dark;
+  
   &:hover {
     background-color: @color-accent-light;
-    border-right:  @border-width solid @color-accent;
-    border-bottom: @border-width solid @color-accent;
-    cursor: pointer;
+    border-right    : @border-width solid @color-accent;
+    border-bottom   : @border-width solid @color-accent;
+    cursor          : pointer;
   }
 }
