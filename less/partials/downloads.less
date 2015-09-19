@@ -66,6 +66,11 @@
   }
 }
 
+#content .post .content .download-album {
+  float : none;
+  margin: 0 auto;
+}
+
 /* Desktop */
 @media screen and (min-width: @breakpoint-big) {
   .download-album {
@@ -82,11 +87,6 @@
   }
 }
 
-.post .content .download-album {
-  float : none;
-  margin: 0 auto;
-}
-
 #content .download-document {
   width : 100%;
   margin: @padding-small 0;
@@ -98,8 +98,9 @@
     background-color: @color-accent;
     border-right    : @border-width solid @color-accent-dark;
     border-bottom   : @border-width solid @color-accent-dark;
+    .3d-button;
     
-    .border-radius &:hover {
+    &:hover {
       background-color: @color-accent-light;
       border-right    : @border-width solid @color-accent;
       border-bottom   : @border-width solid @color-accent;
@@ -117,15 +118,19 @@
     }
   }
 
-  .download-description p {
-    .small;
-    display                   : block;
-    margin                    : 0;
-    padding                   : @padding-small;
-    border-right              : 1px solid @color-background-dark;
-    border-bottom             : 1px solid @color-background-dark;
-    border-left               : 1px solid @color-background-dark;
-    border-bottom-left-radius : @border-radius-normal;
-    border-bottom-right-radius: @border-radius-normal;
+  .download-description {
+    padding: 0 @padding-tiny;
+    
+    p {
+      .small;
+      display                   : block;
+      margin                    : 0;
+      padding                   : @padding-tiny @padding-small;
+      border-right              : 1px solid @color-background-dark;
+      border-bottom             : 1px solid @color-background-dark;
+      border-left               : 1px solid @color-background-dark;
+      border-bottom-left-radius : @border-radius-normal;
+      border-bottom-right-radius: @border-radius-normal;
+    }
   }
 }
