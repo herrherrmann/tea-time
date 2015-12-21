@@ -10,86 +10,85 @@
 @import 'partials/footer';
 @import 'font-awesome/font-awesome';
 
-html {
-  .no-margin-no-padding;
+html,
+div {
+    .no-margin-no-padding;
 }
 
 body {
-  margin          : 0;
-  background-color: @color-background;
-  font-family     : Nunito, sans-serif;
-  font-size       : @font-size-normal;
-  font-weight     : 300;
-  color           : @color-font-main;
-}
-
-div {
-  .no-margin-no-padding;
+    margin               : 0;
+    font-family          : Nunito, sans-serif;
+    font-size            : @font-size-normal;
+    font-weight          : 300;
+    color                : @color-font-main;
+    background-image     : url('img/concrete.png');
+    background-repeat    : repeat;
+    background-attachment: scroll;
 }
 
 a,
 a:link,
 a:visited,
 a:active {
-  color          : @color-accent;
-  text-decoration: none;
-  font-weight    : 400;
-  
-  &:hover {
-    color          : @color-accent-light;
+    color          : @color-accent;
     text-decoration: none;
     font-weight    : 400;
-  }
+    
+    &:hover {
+        color          : @color-accent-light;
+        text-decoration: none;
+        font-weight    : 400;
+    }
 }
 
  ::selection {
-  background-color: @color-accent-lighter;
+    background-color: @color-accent-lighter;
 }
 
 a::selection {
-  color: @color-accent-dark;
+    color: @color-accent-dark;
 }
 
 #container {
-  width    : 100%;
-  max-width: @breakpoint-big;
-  margin   : 0 auto;
+    width    : 100%;
+    max-width: @breakpoint-big;
+    margin   : 0 auto;
 }
 
 /* Desktop */
 @media screen and (min-width: @breakpoint-big) {
-  .desktop-block {
-    display: block;
-  }
+    .desktop-block {
+        display: block;
+    }
 
-  .desktop-inline {
-    display: inline;
-  }
+    .desktop-inline {
+        display: inline;
+    }
 
-  .mobile {
-    display: none;
-  }
+    .mobile {
+        display: none;
+    }
 
-  body {
-    padding: @pading-page @padding-normal @padding-normal;
-  }
+    body {
+        padding: @pading-page @padding-normal @padding-normal;
+    }
 }
 
 /* Mobile */
 @media screen and (max-width: @breakpoint-big) {
-  .desktop-block {
-    display: none;
-  }
+    .desktop-block {
+        display: none;
+    }
 
-  .desktop-inline {
-    display: none;
-  }
+    .desktop-inline {
+        display: none;
+    }
 
-  .mobile {
-    display: block;
-  }
+    .mobile {
+        display: block;
+    }
 
-  body {
-    padding: @padding-small;
-  }
+    body {
+        padding: @padding-small;
+    }
 }
