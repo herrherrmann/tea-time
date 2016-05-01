@@ -1,117 +1,124 @@
 // out: ../style-editor.css, sourcemap: false, compress: true
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url( 'https://fonts.googleapis.com/css?family=Nunito');
 @import 'partials/variables.less';
 @import 'partials/mixins.less';
 
 body {
-  font: 300 @font-size-normal Nunito, sans-serif;
-  color: @color-font-main;
-  background-color: @color-background;
-  text-align: justify;
+    font            : 300 @font-size-normal Nunito, sans-serif;
+    color           : @color-font-main;
+    background-color: @color-background;
+    text-align      : justify;
 }
 
 a {
-  color: @color-accent;
-  text-decoration: none;
-  font-weight: 400;
+    color          : @color-accent;
+    text-decoration: none;
+    font-weight    : 400;
 }
+
 a:hover {
-  color: @color-accent-light;
-  text-decoration: none;
-  font-weight: 400;
+    color          : @color-accent-light;
+    text-decoration: none;
+    font-weight    : 400;
 }
 
 p {
-  // line-height: 1.5em;
+    // line-height: 1.5em;
 }
+
 p:first-of-type {
-  margin-top: 0;
+    margin-top: 0;
 }
+
 p:last-of-type {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 strong {
-  font-style: normal;
-  font-weight: 700;
+    font-style : normal;
+    font-weight: 700;
 }
 
 small {
-  font-size: @font-size-small;
+    font-size: @font-size-small;
 }
 
 h1 {
-  font-size: 2em;
-  margin: 2em 0 0.5em 0;
-  font-weight: 400;
-  border-bottom: 1px solid @color-background-dark;
+    font-size    : 2em;
+    margin       : 2em 0 0.5em;
+    font-weight  : 400;
+    border-bottom: 1px solid @color-background-dark;
 
-  &:first-of-type {
-    margin-top: 0;
-  }
+    &:first-of-type {
+        margin-top: 0;
+    }
 }
 
 h2 {
-  font-size: 1.5em;
-  margin: 2em 0 0.5em 0;
-  font-weight: 400;
-  border-bottom: 1px solid @color-background-dark;
+    font-size    : 1.5em;
+    margin       : 2em 0 0.5em;
+    font-weight  : 400;
+    border-bottom: 1px solid @color-background-dark;
 
-  &.title:first-of-type {
-    margin-top: 0;
-  }
+    &.title:first-of-type {
+        margin-top: 0;
+    }
 }
 
 h3 {
-  font-size: 1.2em;
-  margin: 1.5em 0 0.5em 0;
-  font-weight: 300;
+    font-size  : 1.2em;
+    margin     : 1.5em 0 0.5em;
+    font-weight: 300;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height   : auto;
 
-  &.alignright {
-    float: right;
-    margin-left: @padding-normal;
-    margin-bottom: @padding-normal;
-  }
+    &.alignright {
+        float        : right;
+        margin-left  : @padding-normal;
+        margin-bottom: @padding-normal;
+    }
 
-  &.alignleft {
-    float: left;
-    margin-right: @padding-normal;
-    margin-bottom: @padding-normal;
-  }
+    &.alignleft {
+        float        : left;
+        margin-right : @padding-normal;
+        margin-bottom: @padding-normal;
+    }
 
-  &.aligncenter {
-    margin: @padding-small auto;
-    display: block;
-  }
+    &.aligncenter {
+        margin : @padding-small auto;
+        display: block;
+    }
+}
+
+.aligncenter {
+    margin-left : auto;
+    margin-right: auto;
 }
 
 a:hover img {
-  -webkit-filter: brightness(90%);
-     -moz-filter: brightness(90%);
-      -ms-filter: brightness(90%);
-       -o-filter: brightness(90%);
-          filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+    -moz-filter: brightness(90%);
+    -ms-filter: brightness(90%);
+    -o-filter: brightness(90%);
+    filter: brightness(90%);
 }
 
 blockquote {
-  margin: @padding-small 0;
-  padding: @padding-small;
-  background-color: @color-background-light;
+    margin          : @padding-small 0;
+    padding         : @padding-small;
+    background-color: @color-background-light;
 }
 
-
 i.fa {
-  font-family: FontAwesome;
+    font-family: FontAwesome;
 }
 
 .wp-caption-text {
-  font-weight: 300;
-  text-align: center;
-  .small;
-  .text-muted;
+    font-weight: 300;
+    text-align : center;
+    .small;
+    .text-muted;
 }
