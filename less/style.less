@@ -10,8 +10,8 @@
 @import 'partials/footer';
 @import 'font-awesome/font-awesome';
 
-html,
-div {
+div,
+html {
     .no-margin-no-padding;
 }
 
@@ -27,13 +27,13 @@ body {
 }
 
 a,
+a:active,
 a:link,
-a:visited,
-a:active {
+a:visited {
     color          : @color-accent;
     text-decoration: none;
     font-weight    : 400;
-    
+
     &:hover {
         color          : @color-accent-light;
         text-decoration: none;
@@ -41,7 +41,7 @@ a:active {
     }
 }
 
- ::selection {
+::selection {
     background-color: @color-accent-lighter;
 }
 
