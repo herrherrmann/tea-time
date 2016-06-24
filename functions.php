@@ -12,7 +12,7 @@ function tea_time_automatic_feed_links_support() {
 add_action( 'after_setup_theme', 'tea_time_automatic_feed_links_support' );
 
 function tea_time_title_tag_support() {
-  add_theme_support( 'title-tag' );
+	add_theme_support( 'title-tag' );
 }
 add_action( 'init', 'tea_time_title_tag_support' );
 
@@ -46,21 +46,20 @@ function tea_time_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'tea_time_wp_title', 10, 2 );
 
 function tea_time_menus() {
-  register_nav_menu('main-menu', 'Main Menu' );
-  register_nav_menu('footer-menu', 'Footer Menu' );
+	register_nav_menu('main-menu', 'Main Menu' );
+	register_nav_menu('footer-menu', 'Footer Menu' );
 }
 add_action( 'init', 'tea_time_menus' );
 
-function tea_time_styles_and_scripts() {
-  wp_enqueue_style( 'style-main', get_stylesheet_uri() );
-  wp_enqueue_style( 'style-fonts', 'https://fonts.googleapis.com/css?family=Oswald:700' );
+function tea_time_style() {
+	wp_enqueue_style( 'style-main', get_stylesheet_uri() );
 }
-add_action( 'wp_enqueue_scripts', 'tea_time_styles_and_scripts' );
+add_action( 'wp_enqueue_scripts', 'tea_time_style' );
 
 add_filter( 'use_default_gallery_style', '__return_false' );
 
 function tea_time_editor_style() {
-  add_editor_style( 'style-editor.css' );
+	add_editor_style( 'style-editor.css' );
 }
 add_action( 'init', 'tea_time_editor_style' );
 
@@ -89,33 +88,33 @@ add_action( 'init', 'tea_time_editor_style' );
 // add_action( 'widgets_init', 'widgets_init' );
 
 function tea_time_enqueue_comment_reply() {
-  if ( get_option( 'thread_comments' ) ) {
-    wp_enqueue_script( 'comment-reply' );
-  }
+	if ( get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'comment_form_before', 'tea_time_enqueue_comment_reply' );
 
 /* Include page content with show_page_content function. */
 function show_page_content( $path ) {
-  $post = get_page_by_path( $path );
-  $content = apply_filters( 'the_content', $post->post_content );
-  echo $content;
+	$post = get_page_by_path( $path );
+	$content = apply_filters( 'the_content', $post->post_content );
+	echo $content;
 }
 add_action( 'init', 'show_page_content' );
 
 /* Highlight active custom post page in menu. */
 add_filter( 'nav_menu_css_class', 'tea_time_menu_classes', 10, 2 );
 function tea_time_menu_classes( $classes , $item ) {
-  if ( get_post_type() == 'software' && $item->title == 'Software' ) {
-    // remove unwanted classes if found
-    $classes = str_replace( 'current_page_item', '', $classes );
-    $classes = str_replace( 'menu-item', 'menu-item current-menu-item', $classes );
+	if ( get_post_type() == 'software' && $item->title == 'Software' ) {
+		// remove unwanted classes if found
+		$classes = str_replace( 'current_page_item', '', $classes );
+		$classes = str_replace( 'menu-item', 'menu-item current-menu-item', $classes );
 	}
-  else if ( get_post_type() == 'post' && $item->title == 'Blog' ) {
-    // remove unwanted classes if found
-    $classes = str_replace( 'current_page_item', '', $classes );
-    $classes = str_replace( 'menu-item', 'menu-item current-menu-item', $classes );
-  }
+	else if ( get_post_type() == 'post' && $item->title == 'Blog' ) {
+		// remove unwanted classes if found
+		$classes = str_replace( 'current_page_item', '', $classes );
+		$classes = str_replace( 'menu-item', 'menu-item current-menu-item', $classes );
+	}
 	return $classes;
 }
 
